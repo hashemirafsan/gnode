@@ -1,0 +1,17 @@
+{
+  "name": "auction",
+  "version": "1.0.0",
+  "description": "A Auction site build with express js and vue js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geeeeks",
+  "license": "ISC",
+  "dependencies": {
+    "auto-load": "^3.0.0",
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "lodash": "^4.17.5"
+  }
+}

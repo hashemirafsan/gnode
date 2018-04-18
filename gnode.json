@@ -1,0 +1,9 @@
+{
+	"autoload": {
+		"namespace": "Auction",
+		"mapping": {
+			"App": "app",
+			"framework": "framework"
+		}
+	}
+}

@@ -1,7 +1,7 @@
 class Activator {
 
 	init() {
-		console.log('Activator called')
+		
 	}
 
 }

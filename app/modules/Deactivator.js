@@ -1,7 +1,7 @@
 class Deactivator {
 
 	init() {
-		console.log('Deactivor called')
+		
 	}
 
 }

@@ -1,4 +1,5 @@
-var fs = require('fs');
+const fs = require('fs');
+const Application = require('./Application')
 
 class Bootstrap {
 
@@ -11,6 +12,7 @@ class Bootstrap {
 	run(dir) {
 		this.constructor.init(dir)
 		this.constructor.validateApp()
+		this.constructor.registerApplication()
 	}
 
 	static init(dir) {
@@ -70,7 +72,11 @@ class Bootstrap {
 			process.exit(1)
 		}
 
-		console.log(this.config)
+		//console.log(this.config)
+	}
+
+	static registerApplication() {
+		Application.set(this.file, this.config)
 	}
 }
 

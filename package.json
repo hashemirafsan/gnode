@@ -1,12 +1,12 @@
 {
-  "name": "auction",
+  "name": "gnode",
   "version": "1.0.0",
-  "description": "A Auction site build with express js and vue js",
+  "description": "under construction boilerplate for Express js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Geeeeks",
+  "author": "Hashemi Rafsan",
   "license": "ISC",
   "dependencies": {
     "auto-load": "^3.0.0",

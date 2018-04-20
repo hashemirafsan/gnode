@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Application = require('./Application')
+const View = require('../view/view')
 
 class Bootstrap {
 
@@ -13,6 +14,7 @@ class Bootstrap {
 		this.constructor.init(dir)
 		this.constructor.validateApp()
 		this.constructor.registerApplication()
+		this.constructor.registerView()
 	}
 
 	static init(dir) {
@@ -77,6 +79,11 @@ class Bootstrap {
 
 	static registerApplication() {
 		Application.set(this.file, this.config)
+	}
+
+	static registerView() {
+		View.__set(this.file)
+		console.log(View)
 	}
 }
 

@@ -1,9 +1,13 @@
+const View = require('../../../framework/view/view')
+
 class HomeController {
 
-	index(req, res, next) {
-
-		res.render()
+	hello(req, res, next) {
+		//console.log(View.make())
+		res.sendFile(View.make('index'))
 
 	}
 
 }
+
+module.exports = new HomeController()

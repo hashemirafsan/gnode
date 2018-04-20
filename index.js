@@ -4,10 +4,11 @@ const logger  = require('morgan')
 const Bootstrap = require(__dirname + '/framework/foundation/Bootstrap')
 const Exception = require(__dirname + '/framework/exception/Exception')
 const port = express.get('port') || 3000;
-const Routes = require(__dirname + '/routes/web')
+const Web = require(__dirname + '/routes/web')
+const Api = require(__dirname + '/routes/api')
 const Connection = require(__dirname + '/framework/database/Connection')
 
-
+// Database Connection
 Connection.config({
 	host:'mongodb://localhost:27017/',
 	database: 'auction'
@@ -22,7 +23,11 @@ express.use((req, res, next) => {
 	next()
 })
 
-express.use('/', Routes)
+// all web view
+express.use('/', Web)
+
+// all api routes (version 1 api)
+express.use('/api/v1/', Api)
 
 // 404
 express.use((req, res, next) => {

@@ -1,18 +1,12 @@
 const User = require('../../model/User')
-
+//const View = require('../../../framework/view/view')
 
 class UserController {
-	test(req, res, next) {
-		res.status(200).json({
-			message: 'yes got it '
-		})
-	}
 
-	susmoy(req, res, next) {
-		User.find({}, (err, users) => {
-			res.status(200).json({
-				message: users
-			})
+	testApi(req, res, next) {
+
+		res.status(200).json({
+			message: 'This is test api routes'
 		})
 	}
 }
